@@ -70,13 +70,13 @@ Os jogadores podem escolher entre os seguintes atributos:
 3.  **Compile o Código:** Use o GCC (ou seu compilador C preferido) para gerar o executável.
 
     ```bash
-    gcc supertrunfo.c -o supertrunfo
+    gcc CartasSuperTrunfo.c -o CartasSuperTrunfoMestre
     ```
 
 4.  **Execute o Programa:** Inicie o jogo e siga as instruções na tela.
 
     ```bash
-    ./supertrunfo
+    ./CartasSuperTrunfoMestre
     ```
 
 ---
