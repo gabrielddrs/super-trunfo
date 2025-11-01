@@ -70,27 +70,28 @@ Os jogadores podem escolher entre os seguintes atributos:
 3.  **Compile o Código:** Use o GCC (ou seu compilador C preferido) para gerar o executável.
 
     ```bash
-    gcc supertrunfo.c -o supertrunfo
+    gcc CartasSuperTrunfo.c -o CartasSuperTrunfoMestre
     ```
 
 4.  **Execute o Programa:** Inicie o jogo e siga as instruções na tela.
 
     ```bash
-    ./supertrunfo
+    ./CartasSuperTrunfoMestre
     ```
 
 ---
 
 ## 🖥️ Exemplo de Fluxo (Saída no Console)
 
-O programa irá guiar o usuário na escolha dos atributos e apresentar o resultado final, como no exemplo abaixo (simulado):
 Comparando cartas de Brasil e Japão!
 
-Escolha um atributo: 1 - População 2 - Área ... Escolha: 3 ... Escolha: 5
+Escolha um atributo: 1 - População 2 - Área 3 - PIB 4 - PIB per Capita 5 - Densidade Demográfica Escolha: 3
+
+Escolha um atributo: 1 - População 2 - Área 4 - PIB per Capita 5 - Densidade Demográfica Escolha: 5
 
 ===== RESULTADO ===== Comparação entre Brasil e Japão
 
-Atributo 1: PIB Brasil: 1.85e+12 | Japão: 4.94e+12 --> Vencedor: Japão
+Atributo 1: PIB Brasil: 1847000000000.00 | Japão: 4937000000000.00 --> Vencedor: Japão
 
 Atributo 2: Densidade Demográfica Brasil: 25.10 | Japão: 330.80 --> Vencedor: Brasil
 
