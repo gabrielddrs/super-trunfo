@@ -1,33 +1,99 @@
-🌟 Readme do Projeto: Super Trunfo – Comparação de Cartas com Múltiplos Atributos 🌟📖 Descrição do ProjetoEste projeto consiste em uma implementação simples do popular jogo de cartas Super Trunfo na linguagem C. O objetivo é comparar dois "países" (cartas) com base em dois atributos escolhidos pelo jogador. O programa determina o vencedor de cada atributo individualmente, considerando regras especiais, e em seguida, calcula o vencedor final somando os valores dos atributos comparados de cada país.O jogo oferece uma experiência interativa por linha de comando, permitindo a escolha dinâmica dos atributos e exibindo um resultado detalhado de cada comparação.🚀 Funcionalidades ChaveEstrutura de Dados struct: Utilização de uma struct chamada Carta para armazenar de forma organizada todos os dados de um país (nome e seus atributos numéricos).Menu de Atributos Interativo: Um menu claro para o jogador escolher os dois atributos que deseja comparar. A opção escolhida na primeira vez é removida para a segunda escolha, garantindo a comparação de atributos distintos.Regra de Vantagem Especial: Implementação da regra onde o maior valor vence para a maioria dos atributos, mas o menor valor vence especificamente para a Densidade Demográfica.Comparação Detalhada: O programa compara as cartas (Brasil e Japão no exemplo) nos dois atributos selecionados.Cálculo do Vencedor Final: O vencedor final é determinado pela soma dos valores dos dois atributos comparados de cada país. O país com a maior soma vence. Em caso de somas iguais, é declarado um empate.Exibição de Resultados: Apresentação clara dos valores de cada país, o vencedor de cada atributo e, finalmente, o resultado e o vencedor final.🏷️ Atributos DisponíveisOs seguintes atributos dos países estão disponíveis para comparação no jogo:População (em número de habitantes)Área (em $\text{km}^2$)PIB (Produto Interno Bruto)PIB per CapitaDensidade Demográfica (em hab/$\text{km}^2$)📊 Regras de ComparaçãoAtributoRegra de VitóriaPopulação, Área, PIB, PIB per CapitaMaior valor vence.Densidade DemográficaMenor valor vence.Regra de Vitória Final:Os valores dos dois atributos escolhidos de cada país são somados.O país com a maior soma total é declarado o vencedor final.Se as somas forem iguais, o resultado é Empate.⚙️ RequisitosUm Compilador C (como GCC, Clang ou MinGW).Sistema operacional compatível com C padrão (Linux, Windows, macOS).🔧 Como Compilar e ExecutarSiga os passos abaixo para colocar o Super Trunfo em funcionamento:Salve o Código: Salve o código-fonte C fornecido em um arquivo chamado supertrunfo.c.Abra o Terminal: Navegue até o diretório onde você salvou o arquivo supertrunfo.c.Compile o Código: Utilize o compilador GCC para compilar o programa.Bashgcc supertrunfo.c -o supertrunfo
-Execute o Programa: Rode o executável gerado.Bash./supertrunfo
-Jogue: Siga as instruções no terminal, digitando o número correspondente aos atributos desejados para iniciar a comparação.🖥️ Exemplo de Fluxo do Programa (Simulação)Comparando cartas de Brasil e Japão!
+# 🌟 Super Trunfo Simplificado em C 🌟
+## Comparação de Cartas com Múltiplos Atributos
 
-Escolha um atributo:
-1 - População
-2 - Área
-3 - PIB
-4 - PIB per Capita
-5 - Densidade Demográfica
-Escolha: 3 (Usuário escolhe PIB)
+[![Linguagem](https://img.shields.io/badge/Linguagem-C-blue.svg)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)](README.md)
 
-Escolha um atributo:
-1 - População
-2 - Área
-4 - PIB per Capita
-5 - Densidade Demográfica
-Escolha: 5 (Usuário escolhe Densidade Demográfica)
+## 📖 Descrição do Projeto
 
-===== RESULTADO =====
-Comparação entre Brasil e Japão
+Este projeto implementa uma versão simplificada e interativa do clássico jogo de cartas **Super Trunfo** (ou Top Trumps) utilizando a linguagem C.
 
-Atributo 1: PIB
-Brasil: 1847000000000.00 | Japão: 4937000000000.00 --> Vencedor: Japão (Maior PIB vence)
+O programa permite a comparação de duas cartas de países (`Brasil` e `Japão` no exemplo) com base em **dois atributos distintos** escolhidos pelo jogador. O objetivo principal é determinar o vencedor de cada atributo individualmente, considerando regras especiais, e em seguida, calcular o **vencedor final** com base na soma dos valores dos atributos comparados.
 
-Atributo 2: Densidade Demográfica
-Brasil: 25.10 | Japão: 330.80 --> Vencedor: Brasil (Menor densidade vence)
+A aplicação é executada via linha de comando, oferecendo um menu interativo para a seleção dos atributos e um resultado detalhado da disputa.
 
-Somas:
-Brasil: 1847000000025.10
-Japão: 4937000000330.80
+---
+
+## 🚀 Funcionalidades Chave
+
+* **Estrutura de Dados:** Utilização de uma `struct` (`Carta`) para modelar e armazenar as informações de cada país (nome e cinco atributos numéricos).
+* **Menu Interativo:** Exibição de um menu dinâmico que permite ao jogador escolher **dois atributos distintos** para a comparação.
+* **Regra de Vantagem Especial:** Tratamento especial para o atributo *Densidade Demográfica*, onde o **menor valor vence**, em contraste com os demais atributos (onde o maior valor vence).
+* **Comparação de Cartas:** Execução da lógica de comparação entre as duas cartas fixas (`Brasil` e `Japão`).
+* **Cálculo de Vitória Final:** O vencedor final é determinado pela **soma dos valores** dos dois atributos escolhidos. O país com a maior soma vence, ou o resultado é empate.
+* **Saída Detalhada:** Exibição clara e formatada dos resultados parciais (vencedor de cada atributo) e do resultado final.
+
+---
+
+## 🏷️ Atributos Disponíveis para Comparação
+
+Os jogadores podem escolher entre os seguintes atributos:
+
+1.  **População**
+2.  **Área**
+3.  **PIB** (Produto Interno Bruto)
+4.  **PIB per Capita**
+5.  **Densidade Demográfica**
+
+---
+
+## 📊 Regras de Comparação
+
+### 1. Vitória por Atributo
+
+| Atributo | Regra de Vitória | Observações |
+| :--- | :--- | :--- |
+| População, Área, PIB, PIB per Capita | **Maior** valor | Regra padrão (Super Trunfo). |
+| Densidade Demográfica | **Menor** valor | Regra especial (menor é melhor). |
+
+### 2. Vitória Final
+
+* Os valores dos **dois atributos** escolhidos são **somados** para cada país.
+* O país que obtiver a **maior soma total** é o vencedor final.
+* Em caso de somas iguais, o resultado é **Empate**.
+
+---
+
+## 🔧 Requisitos e Instalação
+
+### Requisitos
+
+* Compilador C (Recomendado: **GCC** ou **Clang**).
+* Sistema operacional compatível com C padrão (Linux, Windows, macOS).
+
+### Como Compilar e Executar
+
+1.  **Salve o Código:** Salve o código-fonte fornecido em um arquivo chamado `supertrunfo.c`.
+
+2.  **Abra o Terminal:** Navegue até o diretório onde o arquivo `supertrunfo.c` foi salvo.
+
+3.  **Compile o Código:** Use o GCC (ou seu compilador C preferido) para gerar o executável.
+
+    ```bash
+    gcc supertrunfo.c -o supertrunfo
+    ```
+
+4.  **Execute o Programa:** Inicie o jogo e siga as instruções na tela.
+
+    ```bash
+    ./supertrunfo
+    ```
+
+---
+
+## 🖥️ Exemplo de Fluxo (Saída no Console)
+
+O programa irá guiar o usuário na escolha dos atributos e apresentar o resultado final, como no exemplo abaixo (simulado):
+Comparando cartas de Brasil e Japão!
+
+Escolha um atributo: 1 - População 2 - Área ... Escolha: 3 ... Escolha: 5
+
+===== RESULTADO ===== Comparação entre Brasil e Japão
+
+Atributo 1: PIB Brasil: 1.85e+12 | Japão: 4.94e+12 --> Vencedor: Japão
+
+Atributo 2: Densidade Demográfica Brasil: 25.10 | Japão: 330.80 --> Vencedor: Brasil
+
+Somas: Brasil: 1847000000025.10 Japão: 4937000000330.80
 
 Resultado Final: Japão venceu!
